@@ -1,0 +1,14 @@
+$nomention
+$onlyIf[$mentioned[1]!=$botID; você não pode me banir!]
+$onlyIf[$mentioned[1]!=$authorID; Você não pode se banir a si mesmo!]
+$onlyIf[$mentioned[1]!=$serverOwner; Você não pode banir o owner do servidor, IQ -0 ]
+$onlyBotPerms[sendmessages;Eu preciso a permissão de enviar mensagens!]
+$onlyIf[$rolePosition[$highestRole[$authorID]]<=$rolePosition[$highestRole[$mentioned[1]]]; Você não pode banir alguém que tenha um cargo superior ou igual ao seu!]
+$onlyIf[$rolePosition[$highestRole[$botID]]<=$rolePosition[$highestRole[$mentioned[1]]];Eu não posso banir alguém que esteja com um cargo superior ao meu!]
+$onlyPerms[ban;<@$authorID>, Você precisa ter a permissão banir membros para utilizar este comando.]
+$onlyBotPerms[ban; <@$authorID>,  Eu não possuo a permissão banir Membros, portanto não posso executar este comando.]
+$argsCheck[>2; Utilize da seguinte forma !ban <@user> <motivo>]
+$onlyIf[$mentioned[1]!=; mencione alguém!]
+$clear[1]
+$ban[$noMentionMessage]
+:canecaMad: || <@$authorID>, $username[$mentioned[1]] foi banido com sucesso!
