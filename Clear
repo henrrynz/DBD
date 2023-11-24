@@ -1,0 +1,11 @@
+$nomention
+$title[:policial: Limpeza concluida!]
+$color[ff000]
+$description[
+$argsCheck[>1; Escreva um numero entre 1 a 1000]
+<@$authorID> Limpou $noMentionMessage mensagens 
+$onlyAdmin[Voce tem que ter o cargo ADM!]
+$clear[$message]
+$deleteIn[5]]
+$deletecommand
+$footer[Chat limpo com sucesso]
